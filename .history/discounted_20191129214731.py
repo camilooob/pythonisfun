@@ -1,5 +1,5 @@
 # # Inputs
-price = 500
+price = 100
 # # Process
 discount30 = 0.3
 discount20 = 0.2
@@ -11,9 +11,7 @@ newprice = 0
 
 if price >= 300:
    descuento = price * discount30
-   newprice = price - descuento
    print("discount= ", discount30)
-   print("price = ", newprice)
 elif price >= 200 and price < 300:
     descuento = price * discount20
     newprice = price - descuento
@@ -22,7 +20,7 @@ elif price >= 200 and price < 300:
 elif price >= 100 and price < 200:
     descuento = price * discount10
     newprice = price - descuento
-    print("discount= ", discount10)
+    print("discount= ", discount30)
     print("price = ", newprice)
 elif price < 100 and price >= 0:
    descuento = price * discount5

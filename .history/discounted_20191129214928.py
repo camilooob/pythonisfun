@@ -1,5 +1,5 @@
 # # Inputs
-price = 500
+price = 100
 # # Process
 discount30 = 0.3
 discount20 = 0.2
