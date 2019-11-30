@@ -1,10 +1,4 @@
-"""
-Test discounted code.
-"""
-
-
 def main():
-    """Main Function."""
     # # Inputs
     price = 250
     # # Process

@@ -1,12 +1,6 @@
-"""
-Test discounted code.
-"""
-
-
 def main():
-    """Main Function."""
     # # Inputs
-    price = 250
+    price = 200
     # # Process
     discount30 = 0.3
     discount20 = 0.2
@@ -34,7 +28,7 @@ def main():
         print("discount= ", discount10)
         print("price = ", newprice)
 
-    elif 0 <= price < 100:
+    elif price < 100 and price >= 0:
         descuento = price * discount5
         newprice = price - descuento
         print("discount= ", discount5)
