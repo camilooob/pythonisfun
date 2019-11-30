@@ -1,6 +1,6 @@
 def main():
     # # Inputs
-    price = 500
+    PRICE = 500
     # # Process
     DISCOUNT30 = 0.3
     DISCOUNT20 = 0.2
