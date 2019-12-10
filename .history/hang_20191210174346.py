@@ -73,8 +73,8 @@ FRAMES = ['''
          +-----------+''', '''
      +---+
      |   |
-     |   |   LAST
-     +   |   TRY
+     |   |   GAME
+     +   |   OVER
      O   |
     /|\  |
 	 |   |
@@ -130,7 +130,8 @@ def start():
                 letter_index.append(index)
 
         if len(letter_index) == 0:
-            if tries == 0:
+            tries += 1
+            if tries == 1:
                 display_board(hidden_word, tries, pista)
                 print("")
                 print('PISTA')
@@ -141,9 +142,6 @@ def start():
                 print("")
                 print('PERDISTE')
                 print('La palabra era {}'.format(word_random))
-                break
-            
-            tries += 1
         else:
             for index in letter_index:
                 hidden_word[index] = current_letter

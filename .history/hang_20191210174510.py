@@ -73,8 +73,8 @@ FRAMES = ['''
          +-----------+''', '''
      +---+
      |   |
-     |   |   LAST
-     +   |   TRY
+     |   |   GAME
+     +   |   OVER
      O   |
     /|\  |
 	 |   |
@@ -141,7 +141,6 @@ def start():
                 print("")
                 print('PERDISTE')
                 print('La palabra era {}'.format(word_random))
-                break
             
             tries += 1
         else:
