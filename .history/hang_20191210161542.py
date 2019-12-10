@@ -82,12 +82,3 @@ FRAMES = ['''
          +-----------+
          +-----------+''', '''
 ''']
-
-
-def start():
-    pass
-
-
-# main
-def main():
-    start():
