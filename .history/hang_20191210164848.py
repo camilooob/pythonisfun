@@ -92,42 +92,31 @@ WORDS = [
     'macbook'
 ]
 
-PISTAS = [
-    'lugar',
-    'electrodomestico',
-    'raza perro',
-    'transporte',
-    'accesorio',
-    'dispositivo'
-]
-
 
 def generate_random():
-	index = random.randint(0, len(WORDS) - 1)
-	return WORDS[index], PISTAS[index]
+	index = random.choice(WORDS)
+	return WORDS[index]
 
 
-def display_board(hidden_word, tries, pista):
-    print(FRAMES[tries])
-    print('')
+def display_board(hidden_word, tries):
+	print(FRAMES[tries])
+ 	print(' ')
     print(hidden_word)
     print('--- * --- * ---- * --- * --- * ---')
 
 
 def start():
-    word_random, pista = generate_random()
+    word_random = generate_random()
     hidden_word = ['-'] * len(word_random)
     tries = 0
 
     while True:
-        display_board(hidden_word, tries, pista)
-        current_letter_a = str(input('Escribe una letra:'))
-        current_letter = current_letter_a.lower()
+        display_board(hidden_word, tries)
+        current_letter = str(raw_input('Escribe una letra:'))
+
+ main
 
 
 def main():
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
-
-
-main()

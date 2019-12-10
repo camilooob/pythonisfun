@@ -103,15 +103,18 @@ PISTAS = [
 
 
 def generate_random():
-	index = random.randint(0, len(WORDS) - 1)
+	index = random.choice(WORDS)
 	return WORDS[index], PISTAS[index]
 
 
 def display_board(hidden_word, tries, pista):
-    print(FRAMES[tries])
-    print('')
+	print(FRAMES[tries])
+ 	print(" ")
     print(hidden_word)
     print('--- * --- * ---- * --- * --- * ---')
+    print(" ")
+    print(pista)
+    print(" ")
 
 
 def start():
@@ -121,13 +124,10 @@ def start():
 
     while True:
         display_board(hidden_word, tries, pista)
-        current_letter_a = str(input('Escribe una letra:'))
+        current_letter_a = input('Escribe una letra:'))
         current_letter = current_letter_a.lower()
 
 
 def main():
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
-
-
-main()

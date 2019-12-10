@@ -125,9 +125,6 @@ def start():
         current_letter = current_letter_a.lower()
 
 
-def main():
+if __name__ == '__main__':
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
-
-
-main()

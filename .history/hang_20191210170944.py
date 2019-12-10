@@ -128,6 +128,3 @@ def start():
 def main():
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
-
-
-main()

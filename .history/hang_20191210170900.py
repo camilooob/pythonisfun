@@ -109,7 +109,6 @@ def generate_random():
 
 def display_board(hidden_word, tries, pista):
     print(FRAMES[tries])
-    print('')
     print(hidden_word)
     print('--- * --- * ---- * --- * --- * ---')
 
@@ -128,6 +127,3 @@ def start():
 def main():
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
-
-
-main()
