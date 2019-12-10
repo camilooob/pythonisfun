@@ -83,20 +83,6 @@ FRAMES = ['''
          +-----------+''', '''
 ''']
 
-GAMEROVER = ['''
-     +---+
-     |   |
-     |   |   GAME
-     +   |   OVER
-     O   |
-    /|\  |
-	 |   |
-    / \  |
-         +-----------+
-         +-----------+'''
-
-]
-
 WORDS = [
     'casa',
     'refrigerador',
@@ -151,8 +137,8 @@ def start():
                 print('{}'.format(pista))
 
             if tries == 7:
-                print(GAMEROVER[0])
                 print("")
+                print('GAME OVER')
                 print('La palabra era {}'.format(word_random))
                 break
 
@@ -162,12 +148,6 @@ def start():
                 hidden_word[index] = current_letter
 
                 letter_index = []
-        try:
-        	hidden_word.index('-')
-        except ValueError:
-            print('')
-            print('Felicitaciones! Ganaste. La palabra era: {}'.format(word_random))
-            break
 
 
 def main():

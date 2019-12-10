@@ -14,7 +14,7 @@ FRAMES = ['''
      +---+
      |   |
      +   |
-     O   |  TRY AGAIN 1
+     O   |  TRY AGAIN
          |
          |
          |
@@ -24,7 +24,7 @@ FRAMES = ['''
      +---+
      |   |
      +   |
-     O   |  TRY AGAIN 2
+     O   |  TRY AGAIN
      |   |
          |
          |
@@ -34,7 +34,7 @@ FRAMES = ['''
      +---+
      |   |
      +   |
-     O   |  TRY AGAIN 3
+     O   |  TRY AGAIN
     /|   |
          |
          |
@@ -44,7 +44,7 @@ FRAMES = ['''
      +---+
      |   |
      +   |
-     O   |  TRY AGAIN 4
+     O   |  TRY AGAIN
     /|\  |
          |
          |
@@ -54,7 +54,7 @@ FRAMES = ['''
      +---+
      |   |
      +   |
-     O   |  TRY AGAIN 5
+     O   |  TRY AGAIN
     /|\  |
      |   |
          |
@@ -63,7 +63,7 @@ FRAMES = ['''
          +-----------+''', '''
      +---+
      |   |
-     +   |  TRY AGAIN 6
+     +   |  TRY AGAIN
      O   |
     /|\  |
      |   |
@@ -74,7 +74,7 @@ FRAMES = ['''
      +---+
      |   |
      |   |   LAST
-     +   |   TRY 7
+     +   |   TRY
      O   |
     /|\  |
 	 |   |
@@ -82,20 +82,6 @@ FRAMES = ['''
          +-----------+
          +-----------+''', '''
 ''']
-
-GAMEROVER = ['''
-     +---+
-     |   |
-     |   |   GAME
-     +   |   OVER
-     O   |
-    /|\  |
-	 |   |
-    / \  |
-         +-----------+
-         +-----------+'''
-
-]
 
 WORDS = [
     'casa',
@@ -151,23 +137,18 @@ def start():
                 print('{}'.format(pista))
 
             if tries == 7:
-                print(GAMEROVER[0])
+                display_board(hidden_word, tries, pista)
                 print("")
+                print('GAME OVER')
                 print('La palabra era {}'.format(word_random))
                 break
-
+            
             tries += 1
         else:
             for index in letter_index:
                 hidden_word[index] = current_letter
 
                 letter_index = []
-        try:
-        	hidden_word.index('-')
-        except ValueError:
-            print('')
-            print('Felicitaciones! Ganaste. La palabra era: {}'.format(word_random))
-            break
 
 
 def main():

@@ -163,8 +163,8 @@ def start():
 
                 letter_index = []
         try:
-        	hidden_word.index('-')
-        except ValueError:
+        hidden_word.index('-')
+        except VallueError:
             print('')
             print('Felicitaciones! Ganaste. La palabra era: {}'.format(word_random))
             break
