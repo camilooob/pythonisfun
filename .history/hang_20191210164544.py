@@ -114,9 +114,8 @@ def start():
         display_board(hidden_word, tries)
         current_letter = str(raw_input('Escribe una letra:'))
 
- main
 
-
+# main
 def main():
     print("Bienvido a Ahorcado by Camilo Baquero")
     start()
