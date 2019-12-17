@@ -1,5 +1,5 @@
-def maps(a):
-    double_list = map(lambda i : i * 2, a)
+def maps():
+    double_list = map(lambda i : i * 2, num_list)
     return (list(double_list))
 
 def main():
