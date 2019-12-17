@@ -1,7 +1,6 @@
 def loop(n):
-
     for i in range(n):
-        num = i**2
+        num**2
         print(num)
 
 
