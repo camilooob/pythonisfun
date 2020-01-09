@@ -1,2 +1,4 @@
 .autogit
 .__pychache__
+.dist
+.history
